@@ -1,0 +1,4 @@
+-xc++
+-Iinclude
+-std=c++17
+-Wall
