@@ -89,7 +89,7 @@ void Shader::checkCompileErrors(GLuint shader, std::string type) {
   }
 }
 
-Shader::~Shader() {
+void Shader::destroy() {
   glDeleteProgram(ID);
   std::cout << "SHADER::PROGRAM::ID::" << ID << "::ENDED::SUCCESFULLY"
             << std::endl;

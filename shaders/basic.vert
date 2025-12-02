@@ -1,13 +1,14 @@
-// La declaración de versión corresponde con:
-// La versión de OpenGL 3.3 y el perfil CORE
 #version 330 core
 
-// Se define el canal por donde pasan los datos y una variable de tipo
-// vector de 3 componentes que es de entrada
 layout(location = 0) in vec3 aPos;
+layout(location = 1) in vec3 aColor;
+
+out vec3 color;
+
+uniform float scale;
 
 void main() {
-  // variable predefinida y obligatoria que se utiliza para saber donde
-  // colocar el punto en pantalla
-  gl_Position = vec4(aPos, 1.0);
+  gl_Position = vec4(aPos.x + aPos.x * scale, aPos.y + aPos.y * scale,
+                     aPos.z + aPos.z * scale, 1.0);
+  color = vec3(aColor);
 }

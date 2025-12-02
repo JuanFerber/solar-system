@@ -16,7 +16,7 @@ public:
   void use();
 
   // Destructor
-  ~Shader();
+  void destroy();
 
 private:
   // Función para detectar errores de compilación
